@@ -1,0 +1,98 @@
+
+$screen-xs-min: 425px;  // Tiny phones
+$screen-sm-min: 576px;  // Small tablets and large smartphones (landscape view)
+$screen-md-min: 768px;  // Small tablets (portrait view)
+$screen-lg-min: 992px;  // Tablets and small desktops
+$screen-xl-min: 1200px; // Large tablets and desktops
+// Mixins
+@mixin xs { @media (min-width: #{$screen-xs-min}) {@content;} } // Tiny devices
+@mixin sm { @media (min-width: #{$screen-sm-min}) {@content;} } // Small devices
+@mixin md { @media (min-width: #{$screen-md-min}) {@content;} } // Medium devices
+@mixin lg { @media (min-width: #{$screen-lg-min}) {@content;} } // Large devices
+@mixin xl { @media (min-width: #{$screen-xl-min}) {@content;} } // Extra large devices
+
+
+
+
+body{
+background-image: linear-gradient(to bottom,  rgba(255,168,76,0.6) 0%,rgba(255,123,13,0.6) 100%);
+
+}
+
+.App {
+  text-align: center;
+
+
+}
+
+.App-header{
+  text-align: center;
+  margin: auto;
+  top:40px;
+  font-size: 3em;
+  border-top: 30px;
+  border:10px,10px,10px,10px;
+
+  
+}
+// ===== formFeild ==============
+
+.Form-container{
+  z-index: 7; 
+  margin:auto; 
+  top:100px;
+  left:50px;
+  right:50px;
+  border: 10%; 
+  position:absolute;
+  max-width: 1200px;
+  width:100%;
+  
+  @include xs {         // 576px window width and more
+    top: 50%; 
+    justify-items: center;
+    top:100px;
+    left:50px;
+    right:50px;
+    border: 10%; 
+    // width:100%;
+  }
+ 
+
+  .devider {
+    background-image: linear-gradient(to bottom,  rgba(255,168,76,0.6) 0%,rgba(255,123,13,0.6) 100%);
+    float: center;
+    opacity: 0.7 ;
+  };
+  .form{
+    margin:2%;
+  };
+
+}
+
+.card-container {
+  display: flex; 
+  flex-direction: column-reverse;
+  justify-content: space-evenly; 
+  justify-items: center;
+  position: absolute;
+  margin:auto;
+  border:200px;
+  top: 50%; 
+  left:40%;
+  flex-wrap: wrap;
+  z-index: 10;
+
+  @include sm {         // 576px window width and more
+    top: 50%; 
+    justify-items: center;
+    right:50px;
+  }
+  
+}
+
+// =========== background =====
+
+.landing-container{
+  margin-top: 50px;
+}
