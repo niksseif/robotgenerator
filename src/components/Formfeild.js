@@ -21,7 +21,7 @@ class FormFeild extends Component {
     let newRobot = this.state.newRobot;
     newRobot.url = [
       ...newRobot.url,
-      `${API_BASE_URL}/${newRobot.name}bgset=bg1 `
+      `${API_BASE_URL}/${newRobot.name}/bgset=bg1 `
     ];
     this.setState({ ...newRobot, robo: true });
     this.clear();
