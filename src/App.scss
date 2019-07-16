@@ -41,41 +41,40 @@ animation: color-me-in 5s;
 
 .App-header{
   text-align: center;
+  margin:auto;
   font-size: 3em;
     @include xs { 
        margin: auto;
         top:100px;   
-        font-size: 2em;
+        font-size: 1.5em;
     }
   
 }
 // ===== formFeild ==============
 
 .Form-container{
-  z-index: 7; 
+  z-index: 2; 
   margin:auto; 
-  position:absolute;
   width:100%;
+  padding-left: 30%;
+  padding-right: 30%;
 
-  @include xs {         // 576px window width and more
+  @include xs {         // 300px window width and more
     margin: auto;
+    width: 100%;
     top:20px;
-    left:1px;  
-    right:-50
+
   }
-    @include md {        
+    @include md {        // 768px window width and more
     margin: auto;
-    top:100px;
+    width: 100%;
     
   }
  
   .form{
     z-index: 0;
     margin:auto;
-    width: 40%;
-    left:23%;
     
-
     @include xs {         // 300px window width and more
     margin:7%
     }
@@ -86,29 +85,25 @@ animation: color-me-in 5s;
 .card-container {
   display: flex; 
   flex-direction: column-reverse;
-  justify-content: space-evenly; 
+  justify-content: center; 
   justify-items: center;
-  position: absolute;
   margin:auto;
-  border:200px;
   top: 500px;
-  left:400px;
   z-index: 10;
 
   @include xs { 
-    margin:auto;        // 576px window width and more
+    margin:auto;        // 300px window width and more
     top: 400px; 
-    left:20%;
-    right:20%;
-    justify-items: center;
+    justify-content: center; 
+    width: 50%;
+    padding-bottom: 5%;
+
     
   }
   @include md { 
-    margin:auto;        // 576px window width and more
+    margin:auto;        // 768px window width and more 
     top: 480px; 
-    left:40%;
-    right:20%;
-    justify-items: center;
+     margin-left:40%;
     
   }
   

@@ -13,7 +13,7 @@ class FormFeild extends Component {
     },
     loading: true,
     robo: false,
-    show:false,
+    show: false
   };
 
   //handle submit
@@ -26,7 +26,7 @@ class FormFeild extends Component {
       `${API_BASE_URL}/${newRobot.name}/bgset=bg1 `
     ];
     this.setState({ ...newRobot, robo: true });
-    window.scrollTo(0,480)
+    window.scrollTo(0, 480);
     this.clear();
   };
 
@@ -38,53 +38,53 @@ class FormFeild extends Component {
     this.setState({ newRobot });
   };
   //hidden Alert
-    hiddenAlert = () => {
-        this.setState({ show: false });
-    };
+  hiddenAlert = () => {
+    this.setState({ show: false });
+  };
 
   //render form
   renderForm = () => {
     return (
       <div className="Form-container">
-        
-          <Form className="form" onSubmit={this.handleSubmit}>
-            <Form.Field>
-              <label>What do you want to call your robot?</label>
-              <input
-                placeholder="Robot Name"
-                name="name"
-                value={this.state.newRobot.name}
-                onChange={e => {
-                  let newRobot = { ...this.state.newRobot };
-                  newRobot.name = e.target.value;
-                  this.setState({ newRobot });
-                }}
-              />
-              <label>What your Robot do?</label>
-              <input
-                placeholder="What your robot do"
-                name="Robot job"
-                value={this.state.newRobot.job}
-                onChange={e => {
-                  let newRobot = { ...this.state.newRobot };
-                  newRobot.job = e.target.value;
-                  this.setState({ newRobot });
-                }}
-              />
-            </Form.Field>
-            <Button type="submit" onClick={() => this.setState({show:true})}>Submit</Button>
-          </Form>
-       
+        <Form className="form" onSubmit={this.handleSubmit}>
+          <Form.Field>
+            <label>What do you want to call your robot?</label>
+            <input
+              placeholder="Robot Name"
+              name="name"
+              value={this.state.newRobot.name}
+              onChange={e => {
+                let newRobot = { ...this.state.newRobot };
+                newRobot.name = e.target.value;
+                this.setState({ newRobot });
+              }}
+            />
+            <label>What your Robot do?</label>
+            <input
+              placeholder="What your robot do"
+              name="Robot job"
+              value={this.state.newRobot.job}
+              onChange={e => {
+                let newRobot = { ...this.state.newRobot };
+                newRobot.job = e.target.value;
+                this.setState({ newRobot });
+              }}
+            />
+          </Form.Field>
+          <Button type="submit" onClick={() => this.setState({ show: true })}>
+            Submit
+          </Button>
+        </Form>
       </div>
     );
   };
   render() {
-    const { newRobot, robo ,show} = this.state;
+    const { newRobot, robo, show } = this.state;
     return (
       <div className="landing-container">
         <span className="App-header"> ROBOT GENERATOR </span>
         {this.renderForm()}
-         
+
         <FlyingRobots />
         {robo ? (
           <div className="card-container">
