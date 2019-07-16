@@ -13,7 +13,8 @@ npm start <br>
 create-react-app <br>
 React-semantic-ui <br>
 npm - Dependency Management <br>
-
+# Credit
+Robots lovingly delivered by Robohash.org
 
 # Links 
 ##### Deployed version:https://enigmatic-dusk-43224.herokuapp.com/
