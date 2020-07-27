@@ -1,6 +1,6 @@
 # robot-generator
 This is a robot generator client side app, using https://robohash.org/
-This app was made with creat react app for the front-end
+This app was made with create react app for the front-end
 # Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system
 # Prerequisites
